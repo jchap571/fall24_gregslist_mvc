@@ -23,4 +23,11 @@ export class HousesController {
 
 
   }
+
+  createHouse() {
+    event.preventDefault()
+    console.log('creating a new house listing')
+    const form = event.target
+    console.log('submitted a new house listing form', form)
+  }
 }
