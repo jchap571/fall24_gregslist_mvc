@@ -9,7 +9,7 @@ const USE_ROUTER = true
 
 
 class App {
-  HousesController = new HousesController()
+  // HousesController = new HousesController()
 
 
   // NOTE today we will be registering controller in the router-config

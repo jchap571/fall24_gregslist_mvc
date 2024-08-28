@@ -18,17 +18,17 @@ export class House {
     return `
       <div class="col-12">
     <section class="row my-3">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <img class="house-img"
           src="${this.imgUrl}"
           alt="Awesome House Picture">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-3">
         <h2>${this.year} - ${this.name}</h2>
-        <h3 class="fw-b">${this.price}</h3>
-        <h4>${this.bedrooms}</h4>
-        <h4>${this.bathrooms}</h4>
-        <h5>${this.sqft}</h5>
+        <h3 class="fw-b">$${this.price}</h3>
+        <h4>Bedrooms: ${this.bedrooms}</h4>
+        <h4>Bathrooms: ${this.bathrooms}</h4>
+        <h5>Sqr Feet: ${this.sqft}</h5>
         <p>${this.description}</p>
         <div class="align-items-end">
           <button>Contact Seller</button>
