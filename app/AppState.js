@@ -1,4 +1,5 @@
 import { Car } from './models/Car.js'
+import { House } from "./models/House.js"
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
 
@@ -40,6 +41,41 @@ class ObservableAppState extends EventEmitter {
       transmission: 'automatic'
     })
   ]
+  /**@type {House[]} */
+  houses = [
+    new House({
+      year: '1974',
+      bedrooms: 3,
+      bathrooms: 2.5,
+      sqft: 1400,
+      price: 375000,
+      description: 'Newly renovated mid-century modern home',
+      imgUrl: 'https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg'
+    }),
+
+    new House({
+      year: '1990',
+      bedrooms: 2,
+      bathrooms: 2,
+      sqft: 1100,
+      price: 230000,
+      description: 'Nice 2 bedroom home for sale',
+      imgUrl: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8MiUyMGJlZHJvb20lMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D'
+    }),
+
+    new House({
+      year: '2000',
+      bedrooms: 1,
+      bathrooms: 1.5,
+      sqft: 950,
+      price: 130000,
+      description: '1 bedroom house for sale',
+      imgUrl: 'https://images.unsplash.com/photo-1469401258206-4e0cc14e9358?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fDElMjBiZWRyb29tJTIwaG91c2V8ZW58MHx8MHx8fDA%3D'
+    }),
+
+
+  ]
+
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
