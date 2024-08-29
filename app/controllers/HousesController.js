@@ -29,5 +29,14 @@ export class HousesController {
     console.log('creating a new house listing')
     const form = event.target
     console.log('submitted a new house listing form', form)
+
+    const HouseDataFromForm = getFormData(form)
+    console.log('house data from form', HouseDataFromForm);
+
+    HousesService.createHouse(HouseDataFromForm)
   }
+
+
+
+
 }
